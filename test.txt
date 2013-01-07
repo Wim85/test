@@ -1,0 +1,21 @@
+ if(naam.equals("")){
+createErrorPage(response);
+}
+private void createErrorPage(HttpServletResponse response) throws ServletException, IOException{
+PrintWriter out = response.getWriter();
+try {
+/* TODO output your page here. You may use following sample code. */
+out.println("<html>");
+out.println("<head>");
+out.println("<title>XIOS Quiz</title>");
+out.println("</head>");
+out.println("<body>");
+out.println("<p>Beste gebruiker, er is een fout opgetreden tijdens het verwerken van jouw aanvraag.");
+out.println("<p>Klik <a href='start.html'>hier</a> om terug te keren naar de startpagina");
+out.println("</body>");
+out.println("</html>");
+} finally {
+out.close();
+}
+
+}
